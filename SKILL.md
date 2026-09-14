@@ -1,17 +1,12 @@
 ---
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 57749794cdfeb9994825e9b2553efdcf_ce6ad4b4aced11f18f50525400aeaaa3
-    ReservedCode1: wkum9wUqQMTZRLjH0KaSQH8m1V8NVI1Y7IpEQ28SmsXc0iQ125P8HmWJTFsuWwAocqOQwpmH8f7hmL68Iwpu01KL7k9H0LeJ5YaM6g/Nj64kSTeZnNoK1Ce0+qOlc08yme6DqAZeloGjzu6EUr3FtK0F1/uhGy+ZuJ8CYoQhoxwaKlfj1hmEDf3le54=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 57749794cdfeb9994825e9b2553efdcf_ce6ad4b4aced11f18f50525400aeaaa3
-    ReservedCode2: wkum9wUqQMTZRLjH0KaSQH8m1V8NVI1Y7IpEQ28SmsXc0iQ125P8HmWJTFsuWwAocqOQwpmH8f7hmL68Iwpu01KL7k9H0LeJ5YaM6g/Nj64kSTeZnNoK1Ce0+qOlc08yme6DqAZeloGjzu6EUr3FtK0F1/uhGy+ZuJ8CYoQhoxwaKlfj1hmEDf3le54=
+name: msa
+description: 基于同花顺 thsdk 的股票/ETF/基金实时行情与技术指标分析：报出代码即可盯盘、预判涨跌、给出持仓加减仓与止损止盈建议，支持分钟级轮询与 Web 动态面板。
+version: 1.0.0
+tags: [stock, a-share, etf, thsdk, 股票, 盯盘, 行情分析]
+allowed-tools: [exec]
 ---
 
-
-
-# MSA · 分析建议
+# MSA · 股票分析与持仓建议
 
 ## 何时使用
 
@@ -111,3 +106,15 @@ AIGC:
 - 逐笔成交为抽样计算（脚本标注"抽样"与样本量），极端小盘股样本可能不足。
 - 非交易时段运行时，行情为最近一个交易日收盘数据，脚本会在报告头部标注"行情日期"。
 *（内容由AI生成，仅供参考）*
+
+---
+
+<!-- AIGC 内容标识（合规保留，不参与技能元数据解析） -->
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 57749794cdfeb9994825e9b2553efdcf_ce6ad4b4aced11f18f50525400aeaaa3
+    ReservedCode1: wkum9wUqQMTZRLjH0KaSQH8m1V8NVI1Y7IpEQ28SmsXc0iQ125P8HmWJTFsuWwAocqOQwpmH8f7hmL68Iwpu01KL7k9H0LeJ5YaM6g/Nj64kSTeZnNoK1Ce0+qOlc08yme6DqAZeloGjzu6EUr3FtK0F1/uhGy+ZuJ8CYoQhoxwaKlfj1hmEDf3le54=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 57749794cdfeb9994825e9b2553efdcf_ce6ad4b4aced11f18f50525400aeaaa3
+    ReservedCode2: wkum9wUqQMTZRLjH0KaSQH8m1V8NVI1Y7IpEQ28SmsXc0iQ125P8HmWJTFsuWwAocqOQwpmH8f7hmL68Iwpu01KL7k9H0LeJ5YaM6g/Nj64kSTeZnNoK1Ce0+qOlc08yme6DqAZeloGjzu6EUr3FtK0F1/uhGy+ZuJ8CYoQhoxwaKlfj1hmEDf3le54=
