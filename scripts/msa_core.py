@@ -484,6 +484,12 @@ def _klines_retry(full_code, interval, warnings, tag, tries=3, delay=1.2, **kw):
 # 实时票价数据源（多源可选）
 # --------------------------------------------------------------------------
 QUOTE_SOURCES = {
+    "tencent": {
+        "name": "腾讯行情",
+        "product": "腾讯证券行情接口（qt.gtimg.cn）",
+        "address": "http://qt.gtimg.cn/q=",
+        "desc": "HTTP 行情接口，含最新价/昨收/涨跌，全网低延迟",
+    },
     "thsdk": {
         "name": "同花顺实时行情",
         "product": "同花顺 iFinD 游客行情（thsdk 五档盘口/分时）",
@@ -496,12 +502,6 @@ QUOTE_SOURCES = {
         "address": "thsdk://query_wencai_realtime_fields",
         "desc": "现价等问财字段，基金用净值口径涨跌幅",
     },
-    "tencent": {
-        "name": "腾讯行情",
-        "product": "腾讯证券行情接口（qt.gtimg.cn）",
-        "address": "http://qt.gtimg.cn/q=",
-        "desc": "HTTP 行情接口，含最新价/昨收/涨跌，全网低延迟",
-    },
     "sina": {
         "name": "新浪行情",
         "product": "新浪财经行情接口（hq.sinajs.cn）",
@@ -509,7 +509,7 @@ QUOTE_SOURCES = {
         "desc": "HTTP 行情接口，含最新价/昨收/涨跌，备用源",
     },
 }
-DEFAULT_QUOTE_SOURCE = "thsdk"   # 默认：同花顺实时行情（更贴近真实实时价）
+DEFAULT_QUOTE_SOURCE = "tencent"   # 默认：腾讯行情（低延迟优先）
 
 
 def get_quote_sources():

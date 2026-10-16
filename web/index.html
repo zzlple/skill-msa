@@ -223,11 +223,11 @@
 <header>
   <div class="row">
     <div class="title">MSA 实时分析面板<small id="clientTag">· {{CLIENT}}</small><small id="subtitle">—</small></div>
-    <label class="f">代码<input type="text" id="i_code" placeholder="600519"></label>
+    <label class="f">代码<input type="text" id="i_code" placeholder="159567"></label>
     <label class="f">持仓<input type="number" id="i_shares" value="0" min="0"></label>
     <label class="f">成本<input type="number" id="i_cost" placeholder="0.00" step="0.01"></label>
-    <label class="f">频次<input type="range" id="i_interval" min="5" max="600" step="5" value="15" style="width:150px">
-      <b id="i_interval_txt">15s</b></label>
+    <label class="f">频次<input type="range" id="i_interval" min="5" max="600" step="5" value="5" style="width:150px">
+      <b id="i_interval_txt">5s</b></label>
     <label class="f">源<select id="i_source" style="max-width:118px"><option value="">…</option></select></label>
     <button class="ghost" id="btn_sources" type="button">源列表</button>
     <button class="ghost" id="btn_models" type="button">分析模型<span id="mdl_cnt"></span></button>
@@ -251,7 +251,7 @@
 <script>
 const $ = (s)=>document.querySelector(s);
 const el = (t,c)=>{const e=document.createElement(t); if(c)e.className=c; return e;};
-const cfg = {code:'', shares:0, cost:null, interval:15, source:''};
+const cfg = {code:'', shares:0, cost:null, interval:5, source:''};
 let busy=false, paused=false, nextAt=0, lastData=null, lastLiveAt=0;
 let SRC_LIST=[], SRC_CUR='';
 let MDL_LIST=[], MDL_SEL=[];
@@ -1402,13 +1402,13 @@ async function boot(){
     const st=await (await fetch('/api/state')).json();
     const s=st.state||{};
     applyClient(s.client);
-    cfg.code=s.code||'600519'; cfg.shares=s.shares||0; cfg.cost=s.cost;
+    cfg.code=s.code||'159567'; cfg.shares=s.shares||0; cfg.cost=s.cost;
     cfg.interval=s.interval||15;
     $('#i_code').value=cfg.code; $('#i_shares').value=cfg.shares;
     if(cfg.cost!==null&&cfg.cost!==undefined) $('#i_cost').value=cfg.cost;
     $('#i_interval').value=cfg.interval; $('#i_interval_txt').textContent=cfg.interval+'s';
     await Promise.all([loadSources(), loadModels()]);
-  }catch(e){ applyClient(); cfg.code=$('#i_code').value||'600519'; }
+  }catch(e){ applyClient(); cfg.code=$('#i_code').value||'159567'; }
   nextAt=0; run(false); loop();
 }
 $('#i_interval').addEventListener('input',e=>{ $('#i_interval_txt').textContent=e.target.value+'s'; });

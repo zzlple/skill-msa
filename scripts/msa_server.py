@@ -57,12 +57,12 @@ OWNER = _default_client()
 STATE_LOCK = threading.Lock()
 STATE = {
     "client": _default_client(),
-    "code": os.environ.get("MSA_CODE", "600519"),
+    "code": os.environ.get("MSA_CODE", "159567"),
     "market": None,
     "shares": 0,
     "cost": None,
     "refresh_fields": False,
-    "interval": 15,
+    "interval": 5,
     "source": os.environ.get("MSA_QUOTE_SOURCE", msa_core.DEFAULT_QUOTE_SOURCE),
     "models": None,          # 默认全选，实际初值在 parse_models 定义后统一展开
     "started_at": time.strftime("%Y-%m-%d %H:%M:%S"),
