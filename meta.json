@@ -1,0 +1,26 @@
+{
+  "author": "GitHub",
+  "author_icon": "https://static.pc.yyb.qq.com/wupload2skill-author-icons/1775200482140_GitHub.png",
+  "description": "",
+  "detail_describe": "获取沪深A股及ETF/基金实时行情快照\n计算均线MACDKDJRSI等技术指标\n分析盘口五档资金流与分价表\n提供日周月涨跌幅预判与趋势线\n支持持仓成本计算与加减仓止损建议\n启动Web动态面板展示分钟级轮询分析",
+  "display_description": "基于同花顺的股票ETF实时行情与预判建议",
+  "display_name": "股票行情分析",
+  "download_count": 2,
+  "download_url": "https://m-files.marvis.gtimg.com/ugcskillcase/ugc_skill_msa_zzlple_26c61cb76edfb001e7143f8998a00aa2.zip",
+  "icon": "https://m-files.marvis.gtimg.com/ugcskillcase/skill_icon_msa_zzlple_2868f446-b017-11f1-88ac-525400dcc5b3.png",
+  "id": 607,
+  "is_downloaded": false,
+  "last_modified_time": "2026-09-14 17:09:11",
+  "md5": "26c61cb76edfb001e7143f8998a00aa2",
+  "name": "msa_zzlple",
+  "scope": [
+    "main"
+  ],
+  "type": "办公学习",
+  "use_cases": [
+    "帮我分析600519的实时行情和涨跌预判",
+    "我持有510300共5000份成本1.2元，该不该加仓",
+    "每1分钟盯一下300750的盘面变化"
+  ],
+  "version": "4d797ba3c26bdbe12fc4d240e5476af1e3850bda"
+}

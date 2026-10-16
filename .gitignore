@@ -1,0 +1,12 @@
+# 敏感会话与本地缓存
+account.session
+.cache/
+.run/
+
+# Python 字节码
+__pycache__/
+*.pyc
+
+# 备份文件
+*.bak*
+*.log
